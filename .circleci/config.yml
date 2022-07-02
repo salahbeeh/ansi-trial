@@ -39,7 +39,7 @@ jobs:
           name: Run Playbook and Configure server
           command: |
             # Your command
-            ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i -y inventory main_remote.yml
+            ansible-playbook -i -y inventory main_remote.yml
 # Sequential workflow
 workflows:
   # Name the workflow
