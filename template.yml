@@ -23,8 +23,6 @@ Resources:
     Properties:
       SecurityGroups:
         - !Ref InstanceSecurityGroup
-
-      KeyName: ssh_server_test	
       
       ImageId: !Ref AMI
       InstanceType: !Ref InstanceType
