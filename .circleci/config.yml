@@ -87,6 +87,6 @@ workflows:
       - create_infrastructure
       #- configure_infrastructure 
       #- smoke_test
-      - force_failure
+      - force_failure:
           requires:
             - create_infrastructure
