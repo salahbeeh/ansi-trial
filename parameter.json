@@ -1,0 +1,14 @@
+[
+    {
+		"ParameterKey": "EnvironmentName",
+		"ParameterValue": "ansi-trial"
+	},
+    {
+        "ParameterKey": "InstanceType",
+        "ParameterValue": "t3.micro"
+    },
+    {
+        "ParameterKey": "AMI",
+        "ParameterValue": "ami-0729e439b6769d6ab"
+    }
+]
