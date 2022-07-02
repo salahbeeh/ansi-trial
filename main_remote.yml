@@ -1,0 +1,11 @@
+---
+- name: Exercise setting up web server on Ec2
+  hosts: all
+  user: ubuntu
+  become: ture
+  become_method: sudo
+  become_user: root 
+
+
+  roles:
+   - setup
