@@ -16,8 +16,8 @@ jobs:
             name: Create Cloudformation Stack
             command: |
               aws cloudformation deploy \
-                --template-body template.yml \
-                --parameters parameter.json
+                --template-file template.yml \
+                --parameter-overrides file://parameter.json \
                 --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
                 --region us-east-1
 # Sequential workflow
