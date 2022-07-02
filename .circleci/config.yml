@@ -53,9 +53,9 @@ jobs:
             # Test if website exists
             if curl -s --head ${URL} 
             then
-              return 0
+              echo "it worked!"
             else
-              return 1
+              echo "sth wrong!"
             fi
 # Sequential workflow
 workflows:
