@@ -91,7 +91,7 @@ jobs:
           aws cloudformation deploy \
           --template-file cloudfront.yml \
           --stack-name production-distro \
-          --parameter-overrides file://parameter.json \ # Name of the S3 bucket you created manually.
+          --parameter-overrides file://parameter.json # Name of the S3 bucket you created manually.
           --tags project=udapeople &
 
 
@@ -181,7 +181,9 @@ workflows:
       - promote_to_production:
           requires: 
             - create_and_deploy_front_end
-      - get_last_deployment_id
+      - get_last_deployment_id:
+          requires:
+            - create_cloudfront
       - clean_up_old_front_end:
           requires:
             - get_last_deployment_id
